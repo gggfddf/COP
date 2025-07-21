@@ -1,0 +1,159 @@
+{
+  "timestamp": "2025-07-21T06:10:05.296516",
+  "system_info": {
+    "name": "Ultimate Aggressive Deep Learning Trading System",
+    "version": "2.0",
+    "symbol": "GC=F",
+    "features_extracted": "60+ custom features",
+    "models_used": "Transformer + CNN + LSTM concepts",
+    "unsupervised_methods": [
+      "KMeans",
+      "DBSCAN",
+      "AutoEncoder"
+    ]
+  },
+  "market_data": {
+    "current_price": 3374.0,
+    "last_update": "2025-07-21T01:00:00-04:00",
+    "timeframes_analyzed": [
+      "5m",
+      "15m",
+      "1h",
+      "4h",
+      "1d",
+      "1wk"
+    ]
+  },
+  "predictions": {
+    "direction": {
+      "predicted": 0,
+      "probabilities": {
+        "bearish": 1.0,
+        "sideways": 0.34,
+        "bullish": 0.33
+      },
+      "name": "BEARISH"
+    },
+    "magnitude": {
+      "expected_move": -0.00015270854502901274,
+      "scenarios": {
+        "best_case": 0.0007583783097872021,
+        "worst_case": -0.0014482781076652733,
+        "median": -0.0001978710688805168
+      },
+      "confidence_intervals": {
+        "95%": [
+          -0.002042110709220493,
+          0.0008985958561858074
+        ],
+        "80%": [
+          -0.0010226726979461957,
+          0.0005608394024032803
+        ],
+        "50%": [
+          -0.0006246045099907555,
+          0.00019919195225968512
+        ]
+      }
+    },
+    "confidence": 1.0,
+    "outlier_probability": 0.1,
+    "feature_attribution": {
+      "vwap_20": 0.07332622259233854,
+      "volatility_20": 0.049116261181311634,
+      "returns_kurtosis": 0.03505537027697587,
+      "vwap_deviation": 0.0276586154608719,
+      "atr_14": 0.025883308277314783,
+      "returns_skew": 0.0236435674883342,
+      "volume_spike": 0.01892157247632584,
+      "volatility_10": 0.014700806846258104,
+      "day_of_week": 0.014215295338352887,
+      "volume_trend": 0.013946039132129951,
+      "momentum_10bar": 0.013458486429567795,
+      "volatility_5": 0.012005298963373127,
+      "pattern_momentum": 0.01128255139778141,
+      "volatility_rank_20": 0.009189258730077006,
+      "hour_of_day": 0.008507135003182908
+    }
+  },
+  "pattern_analysis": {
+    "kmeans": {
+      "cluster_id": 5,
+      "confidence": 0.8537016421618184,
+      "cluster_size": 18,
+      "pattern_label": "Small_Body_Ranging_Neutral"
+    },
+    "autoencoder": {
+      "reconstruction_error": 0.017525961265124,
+      "error_percentile": 0.635,
+      "is_anomaly": "False",
+      "pattern_label": "Normal_Pattern"
+    }
+  },
+  "risk_dashboard": {
+    "current_price": 3374.0,
+    "risk_level": "LOW",
+    "confidence_score": 1.0,
+    "outlier_risk": "LOW",
+    "volatility_risk": {
+      "current": 0.0012190887404076233,
+      "percentile": 0.0,
+      "level": "LOW"
+    },
+    "position_sizing": {
+      "kelly_fraction": 0.25,
+      "recommended_risk": "25.0% of capital"
+    },
+    "scenarios": {
+      "best_case": {
+        "move": 0.0007583783097872021,
+        "target_price": 3376.5587684172224
+      },
+      "expected": {
+        "move": -0.00015270854502901274,
+        "target_price": 3373.484761369072
+      },
+      "worst_case": {
+        "move": -0.0014482781076652733,
+        "target_price": 3369.1135096647376
+      }
+    },
+    "confidence_intervals": {
+      "95%": {
+        "range": [
+          -0.002042110709220493,
+          0.0008985958561858074
+        ],
+        "price_range": [
+          3367.10991846709,
+          3377.0318624187707
+        ]
+      },
+      "80%": {
+        "range": [
+          -0.0010226726979461957,
+          0.0005608394024032803
+        ],
+        "price_range": [
+          3370.5495023171297,
+          3375.8922721437084
+        ]
+      }
+    },
+    "stop_loss_levels": {
+      "conservative": 3306.52,
+      "moderate": 3272.7799999999997,
+      "aggressive": 3205.2999999999997
+    },
+    "take_profit_levels": {
+      "conservative": 3374.515238630928,
+      "moderate": 3374.7728579463915,
+      "aggressive": 3375.030477261856
+    }
+  },
+  "trading_recommendation": {
+    "signal": "SELL",
+    "confidence_level": "HIGH",
+    "risk_level": "LOW"
+  }
+}
