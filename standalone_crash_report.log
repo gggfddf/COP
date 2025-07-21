@@ -1,0 +1,12 @@
+🔥 STANDALONE SYSTEM CRASH REPORT — Gold Trading AI
+
+Error: 'agreement_strength'
+Traceback (most recent call last):
+  File "/workspace/standalone_enhanced_gold_ai.py", line 1393, in <module>
+    results = run_standalone_enhanced_system()
+  File "/workspace/standalone_enhanced_gold_ai.py", line 1063, in run_standalone_enhanced_system
+    final_report = generate_final_comprehensive_report(master_summary, all_results)
+  File "/workspace/standalone_enhanced_gold_ai.py", line 1232, in generate_final_comprehensive_report
+    • Agreement Strength: {summary['consensus_analysis']['agreement_strength']:.1%}
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'agreement_strength'

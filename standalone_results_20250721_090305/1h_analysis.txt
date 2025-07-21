@@ -1,0 +1,110 @@
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                    GOLD 1H ANALYSIS - ADVANCED CHART                    ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+📊 CURRENT MARKET STATE:
+   💰 Current Price: $1848.76
+   🎯 Direction: NEUTRAL (54.5% probability)
+   🔮 Confidence: 50.0%
+   📈 Expected Move: +4.66%
+
+📈 PRICE TARGETS & LEVELS:
+   🎯 Target Price: $1848.76
+   🛑 Stop Loss: $1848.76
+   ⚖️ Risk/Reward: 1.00
+   📊 Prediction Score: +0.150
+
+🔍 TECHNICAL ANALYSIS SUMMARY:
+
+   📈 TREND ANALYSIS:
+      • Direction: UP
+      • Score: +0.500
+      • SMA 20: $1843.31
+      • Price vs SMA20: 0.3%
+
+   ⚡ MOMENTUM ANALYSIS:
+      • State: NEUTRAL
+      • Score: +0.000
+      • RSI: 52.54
+      • Stochastic: 50.8
+
+   📊 VOLATILITY ANALYSIS:
+      • Regime: HIGH
+      • ATR: $57.56
+      • ATR %: 3.11%
+      • Expected Move: 4.05%
+      • BB Position: 0.562
+
+   🏗️ SUPPORT/RESISTANCE:
+      • Position: MIDDLE_RANGE
+      • Support: $1727.95 (+6.99%)
+      • Resistance: $1950.11 (+5.48%)
+      • Bias Score: +0.000
+
+   📊 VOLUME ANALYSIS:
+      • Trend: NORMAL
+      • Current: 68,814
+      • Average: 62,621
+      • Ratio: 1.1
+
+   🕯️ PATTERN ANALYSIS:
+      • Patterns: No significant patterns
+      • Score: +0.000
+
+   🏗️ MARKET STRUCTURE:
+      • Structure: UPTREND
+      • Swing Highs: 3
+      • Swing Lows: 3
+
+📈 PRICE CHART (Last 50 periods):
+   ──────────────────────────────────────────────────────────────────────
+   │                                                   $1895.48
+   │        ●                                         
+   │            ●                                     
+   │          ●                       ●               
+   │●                                               ● 
+   │                                              ●   
+   │      ●                                           
+   │  ●           ●                     ●              $1847.74
+   │    ●                         ●           ●       
+   │                ●                           ●     
+   │                                ●                 
+   │                            ●           ●         
+   │                    ●                 ●           
+   │                        ● ●                       
+   │                  ●   ●                            $1800.00
+   ──────────────────────────────────────────────────────────────────────
+   Range: $1800.00 - $1895.48 | Current: $1848.76
+
+🌍 MARKET CONDITIONS:
+   • Trend Strength: MODERATE
+   • Momentum State: NEUTRAL
+   • Volatility Level: HIGH
+   • Market Phase: TRENDING
+
+⚠️ RISK ASSESSMENT:
+   • Volatility Regime: HIGH
+   • Confidence Level: 50.0%
+   • Risk/Reward Ratio: 1.00
+   • Recommendation: REDUCE POSITION
+
+📊 RECENT PRICE ACTION:
+    1. $1824.61 (+0.89%) 📈 Vol: 47,445
+    2. $1831.56 (+0.38%) 📈 Vol: 47,694
+    3. $1847.00 (+0.84%) 📈 Vol: 104,086
+    4. $1824.39 (-1.22%) 📉 Vol: 29,398
+    5. $1839.75 (+0.84%) 📈 Vol: 33,405
+    6. $1869.51 (+1.62%) 📈 Vol: 52,363
+    7. $1866.97 (-0.14%) 📉 Vol: 85,797
+    8. $1889.11 (+1.19%) 📈 Vol: 56,032
+    9. $1874.00 (-0.80%) 📉 Vol: 82,064
+   10. $1848.76 (-1.35%) 📉 Vol: 68,814
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                              PREDICTION SUMMARY                              ║
+╠══════════════════════════════════════════════════════════════════════════════╣
+║ DIRECTION: NEUTRAL              CONFIDENCE: 50.0% ║
+║ TARGET: $1848.76                 STOP: $1848.76                 ║
+║ EXPECTED MOVE: +4.66% R/R: 1.00 ║
+╚══════════════════════════════════════════════════════════════════════════════╝
