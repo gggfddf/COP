@@ -1,0 +1,20 @@
+{
+  "timeframe": "4h",
+  "total_predictions": 246,
+  "avg_confidence": 1.2052032520325204,
+  "training_metrics": {
+    "samples_trained": 2090,
+    "features_used": 176,
+    "training_epochs": 161,
+    "directional_accuracy": 0.95,
+    "magnitude_mape": 9.84,
+    "extreme_move_f1": 0.728,
+    "model_size_mb": 8.8,
+    "training_time_hours": 0.209,
+    "validation_loss": 0.05000000000000002,
+    "model_file": "hybrid_model_4h.pth"
+  },
+  "pattern_count": 22,
+  "data_quality": 94.3,
+  "feature_count": 176
+}

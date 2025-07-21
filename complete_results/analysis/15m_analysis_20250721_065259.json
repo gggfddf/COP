@@ -1,0 +1,20 @@
+{
+  "timeframe": "15m",
+  "total_predictions": 246,
+  "avg_confidence": 1.2142276422764227,
+  "training_metrics": {
+    "samples_trained": 34940,
+    "features_used": 151,
+    "training_epochs": 189,
+    "directional_accuracy": 0.9410000000000001,
+    "magnitude_mape": 10.09,
+    "extreme_move_f1": 0.7155,
+    "model_size_mb": 7.550000000000001,
+    "training_time_hours": 3.494,
+    "validation_loss": 0.054499999999999965,
+    "model_file": "hybrid_model_15m.pth"
+  },
+  "pattern_count": 32,
+  "data_quality": 95.10000000000001,
+  "feature_count": 151
+}

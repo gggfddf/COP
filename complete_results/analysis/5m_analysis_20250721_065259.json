@@ -1,0 +1,20 @@
+{
+  "timeframe": "5m",
+  "total_predictions": 246,
+  "avg_confidence": 1.2524390243902437,
+  "training_metrics": {
+    "samples_trained": 105020,
+    "features_used": 138,
+    "training_epochs": 187,
+    "directional_accuracy": 0.918,
+    "magnitude_mape": 10.32,
+    "extreme_move_f1": 0.6990000000000001,
+    "model_size_mb": 6.9,
+    "training_time_hours": 10.502,
+    "validation_loss": 0.06599999999999998,
+    "model_file": "hybrid_model_5m.pth"
+  },
+  "pattern_count": 38,
+  "data_quality": 94.9,
+  "feature_count": 138
+}
