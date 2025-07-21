@@ -1,0 +1,6 @@
+timeframe,direction,confidence,expected_move_pct,target_price,stop_loss,risk_reward_ratio
+5m,STRONG_BUY,0.606,0.11,3388.09,3365.34,0.2
+15m,BUY,0.595,0.2,3363.86,3337.32,0.33
+1h,BUY,0.589,0.31,3429.98,3402.23,0.62
+4h,BUY,0.578,0.68,3387.35,3347.34,1.33
+1d,BUY,0.577,1.21,3430.38,3368.64,2.0

@@ -1,0 +1,156 @@
+LIVE GOLD AI ANALYSIS - 4H TIMEFRAME
+Generated: 2025-07-21 09:15:50
+Current Market Price: $3,364.49
+================================================================================
+
+================================================================================
+                        LIVE GOLD PRICE CHART - XAU/USD                         
+                            Current Price: $3,351.50                            
+================================================================================
+ 3351.5 |                                                           ^
+ 3348.2 |                                                            
+ 3344.9 |                                                            
+ 3341.6 |                                                            
+ 3338.3 |                                                            
+ 3335.0 |                                                            
+ 3331.7 |                                                            
+ 3328.4 |                                                            
+ 3325.1 |                                                            
+ 3321.8 |                                                            
+ 3318.6 |                                               ^            
+ 3315.3 |        ^                                   ^ ^             
+ 3312.0 |   ^  ^      ^          ^                  ^ ^  ^           
+ 3308.7 |    ^^-^●^^^^ ^^      ^  ^  ^^            ^--●v○  ^ ^^ ^ ^  
+ 3305.4 | ^^v○vvv ○○vv○○ ^^^^ ^ ^--^^   ^^^ ^ ^  ^^-○○v v○^ ^  ^   ^ 
+ 3302.1 |^-○     vv    v-●-○v^●● ○○-●○-^   ^○^ ^ ○-vvv   v ●-v ●○^●--
+ 3298.8 |- v v        v v-v  ○-  vv○  ○v○○●- ○v●^ v        vv v- vv  
+ 3295.5 | v        v     v v v vv  vvvv  v  vv  vv             vv  vv
+ 3292.2 |v                              v vv   v                     
+ 3288.9 |                     v                                      
+        ----------------------------------------------------------------------
+
+TECHNICAL ANALYSIS:
+----------------------------------------
+Trend: BULLISH (Strength: 1.00)
+SMA20: $3,304.94 | SMA50: $3,301.91
+RSI: 82.0 | Momentum: STRONG_BULL
+ATR: $11.43 | Volatility: LOW
+Resistance: $3,401.50 | Support: $3,299.72
+
+PREDICTION:
+----------------------------------------
+Direction: BUY (Confidence: 57.8%)
+Target: $3,387.35 | Stop Loss: $3,347.34
+Expected Move: +0.68% | R/R: 1.33
+
+KEY FACTORS:
+• Strong bullish trend
+• Overbought conditions (RSI > 70)
+• Key support/resistance levels identified
+
+================================================================================
+RAW DATA:
+Live Price Data: {
+  "symbol": "XAU/USD",
+  "price": 3364.49,
+  "change": -35.51,
+  "change_percent": -1.044,
+  "timestamp": "2025-07-21T09:15:50.642821",
+  "source": "goldprice_api",
+  "currency": "USD",
+  "unit": "troy_ounce"
+}
+Analysis: {
+  "price_action": {
+    "current_price": 3351.5,
+    "price_change": 48.90000000000009,
+    "price_change_pct": 1.4806516078241414,
+    "body_size": 50.69999999999982,
+    "candle_range": 56.2800000000002,
+    "upper_shadow": 0.0,
+    "lower_shadow": 5.580000000000382,
+    "body_to_range_ratio": 0.9008528784648123,
+    "is_bullish": true,
+    "gap": -1.7999999999997272
+  },
+  "trend_analysis": {
+    "sma_20": 3304.94,
+    "sma_50": 3301.91,
+    "ema_20": 3306.07,
+    "trend_strength": 1.0,
+    "trend_direction": "BULLISH",
+    "distance_from_sma20": 1.4088001597608413,
+    "ma_alignment": true
+  },
+  "momentum": {
+    "rsi": 82.03,
+    "roc": 1.5,
+    "momentum_score": 1.0,
+    "momentum_state": "STRONG_BULL"
+  },
+  "volatility": {
+    "atr": 11.43,
+    "atr_percentage": 0.34,
+    "bollinger_upper": 3327.0,
+    "bollinger_lower": 3282.88,
+    "bollinger_position": 1.56,
+    "volatility_score": 0.11,
+    "volatility_state": "LOW"
+  },
+  "volume_analysis": {
+    "current_volume": 5111,
+    "average_volume": 5283.0,
+    "volume_ratio": 0.97,
+    "volume_trend": -42.14,
+    "volume_state": "NORMAL"
+  },
+  "support_resistance": {
+    "resistance_levels": [
+      3315.59,
+      3312.77,
+      3312.49
+    ],
+    "support_levels": [
+      3299.72,
+      3298.31,
+      3297.72
+    ],
+    "nearest_resistance": 3401.5,
+    "nearest_support": 3299.72
+  },
+  "patterns": {
+    "detected_patterns": [],
+    "pattern_count": 0,
+    "bullish_patterns": 0,
+    "bearish_patterns": 0
+  },
+  "indicators": {
+    "macd": 4.03,
+    "stochastic_k": 100.0,
+    "cci": 440.65
+  }
+}
+Prediction: {
+  "direction": "BUY",
+  "confidence": 0.578,
+  "overall_score": 0.511,
+  "expected_move_pct": 0.68,
+  "target_price": 3387.35,
+  "stop_loss": 3347.34,
+  "risk_reward_ratio": 1.33,
+  "timeframe": "4h",
+  "component_scores": {
+    "trend": 1.0,
+    "momentum": 1.0,
+    "volatility": 0.53,
+    "patterns": 0.0,
+    "support_resistance": -0.055,
+    "volume": -0.103
+  },
+  "key_factors": [
+    "Strong bullish trend",
+    "Overbought conditions (RSI > 70)",
+    "Key support/resistance levels identified"
+  ],
+  "timestamp": "2025-07-21T09:15:50.643295"
+}
