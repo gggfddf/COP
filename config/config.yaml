@@ -1,0 +1,198 @@
+# Autonomous Gold Trading AI Configuration
+system:
+  name: "DeepGold_AI_v1.0"
+  environment: "production"
+  log_level: "INFO"
+  random_seed: 42
+
+# Data Configuration
+data:
+  symbol: "XAUUSD"
+  timeframes: ["1m", "5m", "15m", "1h", "4h", "1d"]
+  primary_timeframe: "5m"
+  lookback_bars: 100
+  max_history_days: 365
+  data_sources:
+    - "yfinance"
+    - "alpha_vantage" 
+    - "ccxt"
+  
+# Model Architecture
+model:
+  architecture: "hybrid_transformer_cnn_lstm"
+  input_sequence_length: 100
+  prediction_horizon: [1, 3, 5, 10]  # bars ahead
+  
+  # Transformer Config
+  transformer:
+    num_layers: 6
+    num_heads: 8
+    hidden_dim: 256
+    dropout: 0.1
+    
+  # CNN Config
+  cnn:
+    filters: [32, 64, 128]
+    kernel_sizes: [3, 5, 7]
+    activation: "relu"
+    
+  # LSTM Config
+  lstm:
+    hidden_size: 128
+    num_layers: 2
+    dropout: 0.2
+    bidirectional: true
+    
+  # Output Layers
+  output:
+    direction_classes: 3  # UP/DOWN/NEUTRAL
+    volatility_classes: 3  # LOW/NORMAL/HIGH
+    confidence_threshold: 0.75
+
+# Feature Engineering
+features:
+  candle_anatomy:
+    - "wick_body_ratios"
+    - "climax_detection"
+    - "engulfing_patterns"
+    - "inside_bars"
+    - "false_breakouts"
+    
+  volatility:
+    - "atr_percentile"
+    - "iv_shocks"
+    - "range_expansion"
+    - "bollinger_width"
+    
+  time_context:
+    - "time_of_day_encoded"
+    - "session_strength"
+    - "days_since_breakout"
+    - "weekly_position"
+    
+  price_action:
+    - "swing_distance"
+    - "vwap_deviation"
+    - "ob_fill_time"
+    - "liquidity_sweeps"
+    
+  market_psychology:
+    - "wick_pressure"
+    - "volume_anomaly"
+    - "fakeout_score"
+    - "displacement_score"
+
+# Pattern Discovery
+patterns:
+  discovery_method: "unsupervised_clustering"
+  num_patterns: 75
+  clustering_algorithm: "dbscan"
+  pattern_memory_size: 1000
+  similarity_threshold: 0.8
+  
+  known_patterns:
+    - "false_break_liquidity_sweep"
+    - "three_bar_exhaustion"
+    - "volume_climax_reversal"
+    - "session_gap_fill"
+    - "liquidity_grab_continuation"
+
+# Training Configuration
+training:
+  batch_size: 64
+  learning_rate: 0.001
+  epochs: 100
+  early_stopping_patience: 15
+  validation_split: 0.2
+  test_split: 0.1
+  
+  # Loss Functions
+  losses:
+    direction: "cross_entropy"
+    magnitude: "mse"
+    volatility: "cross_entropy"
+    pattern: "contrastive"
+    
+  # Optimization
+  optimizer: "adamw"
+  scheduler: "cosine_annealing"
+  weight_decay: 0.01
+  
+  # Retraining
+  retrain_frequency: "weekly"
+  rolling_window_days: 90
+
+# Performance Targets
+performance:
+  directional_accuracy: 0.75
+  magnitude_mape: 0.10
+  extreme_move_f1: 0.65
+  confidence_calibration: 0.05
+  
+# Prediction Output
+output:
+  formats: ["json", "csv", "png"]
+  frequency: "per_bar"
+  alert_threshold: 0.85
+  
+  chart_annotations:
+    - "candle_highlights"
+    - "prediction_zones"
+    - "probability_cones"
+    - "pattern_overlays"
+    
+# Communication
+alerts:
+  email:
+    enabled: true
+    smtp_server: "smtp.gmail.com"
+    smtp_port: 587
+    
+  telegram:
+    enabled: true
+    bot_token: "${TELEGRAM_BOT_TOKEN}"
+    chat_id: "${TELEGRAM_CHAT_ID}"
+    
+  slack:
+    enabled: false
+    webhook_url: "${SLACK_WEBHOOK_URL}"
+
+# Database
+database:
+  type: "mongodb"
+  host: "localhost"
+  port: 27017
+  name: "deepgold_ai"
+  
+  collections:
+    raw_data: "market_data"
+    features: "engineered_features"
+    predictions: "model_predictions"
+    patterns: "discovered_patterns"
+    performance: "model_performance"
+
+# API Configuration
+api:
+  host: "0.0.0.0"
+  port: 8000
+  workers: 4
+  
+  endpoints:
+    predict: "/predict"
+    patterns: "/patterns"
+    performance: "/performance"
+    retrain: "/retrain"
+
+# Monitoring
+monitoring:
+  metrics:
+    - "prediction_accuracy"
+    - "pattern_discovery_rate"
+    - "model_confidence"
+    - "feature_importance"
+    
+  dashboards:
+    - "real_time_predictions"
+    - "pattern_analysis"
+    - "performance_tracking"
+    - "feature_analysis"
