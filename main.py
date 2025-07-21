@@ -31,6 +31,8 @@ import pandas as pd
 import numpy as np
 import torch
 import warnings
+import traceback
+from typing import List, Dict, Optional, Union
 
 # Suppress warnings for cleaner output
 warnings.filterwarnings('ignore')
@@ -479,7 +481,7 @@ class AutonomousGoldTradingAI:
 ║                                                              ║
 ║ PERFORMANCE METRICS:                                         ║
 ║ • Total Predictions:     {self.performance_metrics['total_predictions']:<30} ║
-║ • Average Confidence:    {self.performance_metrics['avg_confidence']:.1%:<30} ║
+║ • Average Confidence:    {self.performance_metrics['avg_confidence']:.1%}{'':>22} ║
 ║ • Patterns Discovered:   {self.performance_metrics['patterns_discovered']:<30} ║
 ║                                                              ║
 ║ FEATURE CATEGORIES IMPLEMENTED:                              ║
@@ -510,6 +512,201 @@ class AutonomousGoldTradingAI:
             
         except Exception as e:
             self.logger.error(f"Performance summary failed: {e}")
+
+def run_gold_ai_system(
+    symbol: str = "XAUUSD",
+    mode: str = "live",
+    timeframe: str = "1h",
+    model_type: str = "hybrid",
+    features: str = "all",
+    pattern_recognition: bool = True,
+    quantile_prediction: bool = True,
+    outlier_classification: bool = True,
+    confidence_threshold: float = 0.85,
+    output_format: List[str] = None,
+    alerting_enabled: bool = True,
+    save_path: str = "./output",
+    logs_enabled: bool = True,
+    verbose: bool = True
+) -> Dict:
+    """
+    🚀 FULL GOLD TRADING AI EXECUTION FUNCTION
+    
+    Complete execution interface for the autonomous Gold trading AI system
+    with comprehensive error handling and crash logging.
+    
+    Args:
+        symbol: Trading symbol (XAUUSD, GC=F, etc.)
+        mode: Execution mode ('live', 'batch', 'backtest')
+        timeframe: Chart timeframe ('1m', '5m', '15m', '1h', '1d')
+        model_type: Model architecture ('hybrid' for Transformer+CNN+LSTM)
+        features: Feature set to use ('all' for 5 categories)
+        pattern_recognition: Enable pattern discovery and classification
+        quantile_prediction: Enable uncertainty quantification
+        outlier_classification: Enable extreme move detection
+        confidence_threshold: Minimum confidence for alerts (0.0-1.0)
+        output_format: List of output formats ['json', 'csv', 'html', 'png']
+        alerting_enabled: Enable alert system
+        save_path: Output directory path
+        logs_enabled: Enable detailed logging
+        verbose: Print progress to terminal
+        
+    Returns:
+        Dictionary with execution results and performance metrics
+    """
+    
+    if output_format is None:
+        output_format = ["json", "csv", "html"]
+    
+    # Setup execution environment
+    execution_id = datetime.now().strftime("%Y%m%d_%H%M%S")
+    
+    try:
+        if verbose:
+            print(f"""
+╔══════════════════════════════════════════════════════════════╗
+║            🔥 AUTONOMOUS GOLD TRADING AI v1.0 🔥            ║
+║                   EXECUTION STARTING                         ║
+╠══════════════════════════════════════════════════════════════╣
+║ Symbol: {symbol:<49} ║
+║ Mode: {mode:<51} ║
+║ Timeframe: {timeframe:<46} ║
+║ Model: {model_type:<49} ║
+║ Features: {features:<47} ║
+║ Confidence Threshold: {confidence_threshold:<35} ║
+║ Execution ID: {execution_id:<43} ║
+╚══════════════════════════════════════════════════════════════╝
+            """)
+        
+        # Create directories
+        os.makedirs(save_path, exist_ok=True)
+        os.makedirs("logs", exist_ok=True)
+        os.makedirs("models", exist_ok=True)
+        
+        # Update configuration dynamically
+        config_updates = {
+            'data': {
+                'symbol': symbol,
+                'primary_timeframe': timeframe
+            },
+            'output': {
+                'formats': output_format,
+                'alert_threshold': confidence_threshold
+            },
+            'alerts': {
+                'enabled': alerting_enabled
+            }
+        }
+        
+        # Initialize AI system
+        if verbose:
+            print("🚀 Initializing Autonomous Gold Trading AI System...")
+        
+        ai_system = AutonomousGoldTradingAI()
+        
+        # Update system configuration
+        ai_system.config.update(config_updates)
+        
+        if verbose:
+            print("✅ System initialized successfully!")
+            print("📊 Starting data collection and feature engineering...")
+        
+        # Determine execution parameters based on mode
+        if mode.lower() == "live":
+            prediction_mode = "continuous"
+            training_days = 90
+        elif mode.lower() == "batch":
+            prediction_mode = "batch" 
+            training_days = 90
+        else:  # backtest
+            prediction_mode = "single"
+            training_days = 180
+        
+        # Run the complete pipeline
+        loop = asyncio.new_event_loop()
+        asyncio.set_event_loop(loop)
+        
+        try:
+            loop.run_until_complete(
+                ai_system.run_complete_pipeline(
+                    training_days=training_days,
+                    prediction_mode=prediction_mode
+                )
+            )
+        finally:
+            loop.close()
+        
+        # Collect results
+        results = {
+            'execution_id': execution_id,
+            'symbol': symbol,
+            'mode': mode,
+            'timeframe': timeframe,
+            'status': 'SUCCESS',
+            'performance_metrics': ai_system.performance_metrics,
+            'system_status': {
+                'is_trained': ai_system.is_trained,
+                'pattern_bank_loaded': ai_system.pattern_bank_loaded,
+                'total_predictions': ai_system.performance_metrics['total_predictions']
+            },
+            'outputs_saved': save_path,
+            'features_implemented': [
+                "Candle Anatomy Features",
+                "Volatility & Range Features", 
+                "Time Context Features",
+                "Price Action Context Features",
+                "Market Psychology Features"
+            ],
+            'model_components': [
+                "Transformer Layers (Temporal Attention)",
+                "CNN Layers (Pattern Detection)",
+                "LSTM Layers (Sequential Dependencies)",
+                "Contrastive Learning Block",
+                "Quantile Regression Head",
+                "Outlier Movement Classifier", 
+                "Pattern Memory Encoder"
+            ]
+        }
+        
+        if verbose:
+            print("✅ EXECUTION COMPLETED SUCCESSFULLY!")
+            print(f"📊 Generated {results['performance_metrics']['total_predictions']} predictions")
+            print(f"🎯 Discovered {results['performance_metrics']['patterns_discovered']} patterns")
+            print(f"📈 Average confidence: {results['performance_metrics']['avg_confidence']:.1%}")
+            print(f"💾 Outputs saved to: {save_path}")
+        
+        return results
+        
+    except Exception as e:
+        error_details = {
+            'execution_id': execution_id,
+            'symbol': symbol,
+            'mode': mode,
+            'status': 'FAILED',
+            'error': str(e),
+            'traceback': traceback.format_exc(),
+            'timestamp': datetime.now().isoformat()
+        }
+        
+        # Save crash report
+        crash_file = f"crash_report_{execution_id}.log"
+        with open(crash_file, "w") as f:
+            f.write("🔥 CRASH REPORT — Gold Trading AI\n")
+            f.write("=" * 50 + "\n\n")
+            f.write(f"Execution ID: {execution_id}\n")
+            f.write(f"Symbol: {symbol}\n")
+            f.write(f"Mode: {mode}\n")
+            f.write(f"Timeframe: {timeframe}\n")
+            f.write(f"Error: {str(e)}\n\n")
+            f.write("FULL TRACEBACK:\n")
+            f.write("-" * 30 + "\n")
+            f.write(traceback.format_exc())
+        
+        if verbose:
+            print(f"❌ EXECUTION FAILED: {str(e)}")
+            print(f"📄 Crash report saved to: {crash_file}")
+        
+        return error_details
 
 async def main():
     """Main entry point"""

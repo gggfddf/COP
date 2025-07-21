@@ -1,0 +1,13 @@
+🔥 CRASH REPORT — Gold Trading AI
+
+Traceback (most recent call last):
+  File "/workspace/simple_gold_ai_demo.py", line 304, in <module>
+    results = run_gold_ai_system(
+        symbol="XAUUSD",                   # 🔁 Gold symbol (spot/futures)
+    ...<12 lines>...
+        verbose=True                       # Print key steps live to terminal
+    )
+  File "/workspace/simple_gold_ai_demo.py", line 255, in run_gold_ai_system
+    print(f"║ • Average Confidence:    {avg_confidence:.1%:<30} ║")
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Invalid format specifier '.1%:<30' for object of type 'float'
